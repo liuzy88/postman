@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_name__",
+  "version": "0.8.4.22",
+  "default_locale": "en",
+  "description": "Postman - REST Client",
+  "offline_enabled": true,
+
+  "icons": {
+    "16": "icon_16.png",
+    "32": "icon_32.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "icon_16.png",
+      "32": "icon_32.png",
+      "48": "icon_48.png",
+      "128": "icon_128.png"
+    },
+    "default_title": "Postman - REST Client"
+    // 如果有 default_popup，可以加 default_popup: "popup.html"
+  },
+
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "http://*/",
+    "https://*/"
+  ],
+
+  "optional_permissions": [],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
